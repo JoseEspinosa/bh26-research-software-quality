@@ -73,3 +73,33 @@ The TechRadar links tools to indicators in two ways:
 ### Software tiers
 
 RSQKit classifies research software into [three tiers](https://everse.software/RSQKit/three_tier_view): **analysis code**, **prototype tools** and **research software infrastructure**. How relevant an indicator is depends on the tier. Something that is nice to have for analysis code can be essential for research software infrastructure. `resqui` ships [configuration files](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/tree/main/configurations) with recommended indicators for each tier (`indicators_analysis_code.json`, `indicators_prototype_tools.json` and `indicators_rs_infrastructure.json`).
+
+## Candidate tools and indicators
+
+The main target of Track 1 is **TechRadar tools that measure indicators not yet covered by `resqui`**. We compared the TechRadar catalogue with the plugins currently in `resqui` to build a list of candidates.
+
+<!-- TODO: link the public Google Drive tables here:
+     - TechRadar measuring tools vs. indicators already in resqui (candidates to add)
+     - resqui indicators vs. TechRadar (mismatches worth reporting)
+     - Prioritisation of candidate indicators per tier -->
+
+### Work already in progress
+
+Before picking a candidate, check that nobody is already working on it. These open `resqui` pull requests add new plugins or indicators:
+
+| PR | Tool | Indicator |
+|---|---|---|
+| [#144](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/pull/144) | interrogate | `code_documentation_coverage_ok` |
+| [#143](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/pull/143) | HowFairIs | `software_has_license` for file types |
+| [#139](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/pull/139) | rsmetacheck | `metadata_is_up_to_date` |
+| [#137](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/pull/137) | pylint | `code_smells_ok` |
+| [#134](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/pull/134) | repowise | `code_churn_ok` |
+
+See also the issue [#51 "list of next plugins"](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/issues/51), where the `resqui` team tracks which plugins to implement next.
+
+
+<!-- TODO: confirm with Dmitry and Jose Maria whether these libraries can be added to resqui. -->
+
+<!-- ### Proposed example cases
+
+<!-- Two libraries that detect **license inconsistencies** in software, one for Java and one for Python, are being considered as example cases for the hackathon. The Java one would run as a Docker image with a wrapper script, and the Python one as a Python package. --> -->
