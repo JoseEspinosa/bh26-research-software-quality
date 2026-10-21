@@ -42,3 +42,15 @@ The BioHackathon follows the [ELIXIR Code of Conduct](https://elixir-europe.org/
 | [Open issues](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/issues) and [pull requests](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/pulls) | Check these before starting, so you don't duplicate work in progress. |
 
 <!-- TODO: add the resqui/TechRadar indicator tables here once they are published in the public Google Drive. -->
+
+## Tracks
+
+The project has three participation tracks, and you can join on site or remotely. No prior experience with software quality is needed for any of them.
+
+| Track | Focus | Experience |
+|---|---|---|
+| **1. Coding** (this repository) | Add new tools and indicators to `resqui` as plugins, turning quality indicators into automated checks. | Some coding experience (Python, and Docker for some tools) and familiarity with Git and GitHub (forks, branches, pull requests) help. |
+| 2. Workflows | Bring quality indicators to [WorkflowHub](https://workflowhub.eu/) and BioFAIR, using real workflows as test cases. | No coding experience needed. |
+| 3. Health and genomic data | Shape the indicators B1MGplus needs, including security and a new *software responsibility* dimension for medical software. | No coding experience needed. |
+
+**This repository is mainly for Track 1.** The rest of this README explains how to pick a tool or indicator and contribute it to `resqui`. If you're interested in Tracks 2 or 3, join the [Slack channel](https://biohackeu.slack.com/archives/C0BBMFB0XEY) and see the [project overview](https://docs.google.com/document/d/1zGAxM7-GvqGruW7ceickFvOGYLyjlxloTAKQlunU8SM/edit?usp=sharing).
