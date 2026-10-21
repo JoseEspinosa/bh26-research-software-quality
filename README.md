@@ -103,3 +103,65 @@ See also the issue [#51 "list of next plugins"](https://github.com/EVERSE-Resear
 <!-- ### Proposed example cases
 
 <!-- Two libraries that detect **license inconsistencies** in software, one for Java and one for Python, are being considered as example cases for the hackathon. The Java one would run as a Docker image with a wrapper script, and the Python one as a Python package. --> -->
+
+## Contributing a new tool or indicator to `resqui`
+
+### 1. Pick and claim a candidate
+
+1. Choose a tool and indicator from the [candidates](#candidate-tools-and-indicators), and check it's not in the [work already in progress](#work-already-in-progress).
+2. Open an issue in `resqui` with the [plugin or indicator request](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/issues/new?template=plugin_or_indicator_request.yml) template, or comment on an existing one, so others know you're working on it.
+3. Check that the indicator exists in the [EVERSE indicators catalogue](https://everse.software/indicators/website/indicators.html). Its `@id` must match the EVERSE vocabulary.
+
+### 2. Fork and set up `resqui`
+
+Fork [EVERSE-ResearchSoftware/QualityPipelines](https://github.com/EVERSE-ResearchSoftware/QualityPipelines) on GitHub, then clone your fork and create a branch from `main`:
+
+```bash
+git clone git@github.com:<your-user>/QualityPipelines.git
+cd QualityPipelines
+git remote add upstream https://github.com/EVERSE-ResearchSoftware/QualityPipelines.git
+git checkout -b plugin/<tool-name>
+```
+
+Install the development environment and run the tests (Python 3.9+, and Docker for plugins that use Docker images):
+
+```bash
+make install-dev
+make test
+```
+
+> [!TIP]
+> Always work from the `main` branch of the repository rather than the release on PyPI. The PyPI version may pull some Docker images (such as OpenSSF Scorecard) from registries that are no longer publicly accessible.
+
+### 3. Write the plugin
+
+The [Add an Indicator Plugin](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md) guide covers the details. In short:
+
+1. Create `src/resqui/plugins/<tool-name>.py` with a class that subclasses `IndicatorPlugin`. Set its `name`, `version`, `id` (the tool's TechRadar `@id`) and `indicators`, and add one method per indicator that returns a `CheckResult`.
+2. Choose how to run the tool:
+   - `PythonExecutor` if the tool is a Python package.
+   - `DockerExecutor` if the tool is distributed as a Docker image, or needs other languages or system dependencies.
+3. Import the plugin in `src/resqui/plugins/__init__.py`.
+4. Add the indicator to a configuration file in `configurations/`.
+5. Add tests in `tests/` and document the plugin in `docs/explanation/plugins.md`.
+
+### 4. Check it works
+
+```bash
+resqui indicators                                   # your plugin and indicators should be listed
+resqui -c <your-config>.json -u <repo-url> -t $GITHUB_TOKEN -o test.json
+make test
+```
+
+### 5. Open a pull request
+
+Push your branch to your fork and open a pull request against `main` in `EVERSE-ResearchSoftware/QualityPipelines`, linking the issue you opened in step 1. Follow the [contributing guidelines](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/CONTRIBUTING.md).
+
+If the tool is not in the TechRadar yet, it also needs to be registered there. Ask in the [Slack channel](https://biohackeu.slack.com/archives/C0BBMFB0XEY) how to do it.
+
+### Further reading
+
+- [Add an Indicator Plugin](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md)
+- [Plugins and the indicators they cover](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/explanation/plugins.md)
+- [Custom configurations](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/custom-configuration.md)
+- [Contributing guidelines](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/CONTRIBUTING.md)
