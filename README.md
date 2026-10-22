@@ -72,7 +72,64 @@ The TechRadar links tools to indicators in two ways:
 
 ### Software tiers
 
-RSQKit classifies research software into [three tiers](https://everse.software/RSQKit/three_tier_view): **analysis code**, **prototype tools** and **research software infrastructure**. How relevant an indicator is depends on the tier. Something that is nice to have for analysis code can be essential for research software infrastructure. `resqui` ships [configuration files](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/tree/main/configurations) with recommended indicators for each tier (`indicators_analysis_code.json`, `indicators_prototype_tools.json` and `indicators_rs_infrastructure.json`).
+RSQKit classifies research software into [three tiers](https://everse.software/RSQKit/three_tier_view): **analysis code**, **prototype tools** and **research software infrastructure**. How relevant an indicator is depends on the tier. Something that is nice to have for analysis code can be essential for research software infrastructure. `resqui` ships configuration files with the recommended indicators for [analysis code](https://raw.githubusercontent.com/EVERSE-ResearchSoftware/QualityPipelines/main/configurations/indicators_analysis_code.json), [prototype tools](https://raw.githubusercontent.com/EVERSE-ResearchSoftware/QualityPipelines/main/configurations/indicators_prototype_tools.json) and [research software infrastructure](https://raw.githubusercontent.com/EVERSE-ResearchSoftware/QualityPipelines/main/configurations/indicators_rs_infrastructure.json).
+
+EVERSE rates how relevant each indicator is for each tier: *crucial*, *recommended*, *good to have* or *not relevant*. The table below is taken from [Relevance of Indicators for RS Tiers](https://everse.software/indicators/website/rs_tiers.html).
+
+<details>
+<summary>Relevance of indicators for each tier</summary>
+
+| Indicator | Analysis code | Prototype tools | RS infrastructure |
+|---|---|---|---|
+| [Software is archived in a scholarly repository](https://w3id.org/everse/i/indicators/archived_in_scholarly_repository) | good to have | good to have | crucial |
+| [Software is archived in Software Heritage](https://w3id.org/everse/i/indicators/archived_in_software_heritage) | good to have | good to have | recommended |
+| [CodeMeta completeness](https://w3id.org/everse/i/indicators/codemeta_completeness) | not relevant | not relevant | good to have |
+| [Code churn follows community conventions](https://w3id.org/everse/i/indicators/code_churn_ok) | not relevant | good to have | recommended |
+| [The documentation coverage for the codebase follows community conventions](https://w3id.org/everse/i/indicators/code_documentation_coverage_ok) | not relevant | good to have | good to have |
+| [Code duplication follows community conventions](https://w3id.org/everse/i/indicators/code_duplication_ok) | not relevant | good to have | recommended |
+| [Code smells follow community conventions](https://w3id.org/everse/i/indicators/code_smells_ok) | good to have | good to have | recommended |
+| [Coupling between objects follows community conventions](https://w3id.org/everse/i/indicators/coupling_between_objects_ok) | not relevant | good to have | recommended |
+| [Cyclomatic complexity follows community conventions](https://w3id.org/everse/i/indicators/cyclomatic_complexity_ok) | not relevant | good to have | good to have |
+| [Software has dependency management solution](https://w3id.org/everse/i/indicators/dependency_management) | recommended | recommended | crucial |
+| [Software has descriptive metadata](https://w3id.org/everse/i/indicators/descriptive_metadata) | not relevant | good to have | crucial |
+| [Has a measure of functional correctness](https://w3id.org/everse/i/indicators/functional_correctness) | good to have | recommended | crucial |
+| [Project has active communication channels](https://w3id.org/everse/i/indicators/has_active_communication_channels) | good to have | good to have | good to have |
+| [Project has active contributors beyond core maintainers](https://w3id.org/everse/i/indicators/has_active_contributors) | not relevant | good to have | recommended |
+| [Software has continuous integration tests](https://w3id.org/everse/i/indicators/has_ci-tests) | good to have | good to have | crucial |
+| [Software repository has contribution guidelines](https://w3id.org/everse/i/indicators/has_contribution_guidelines) | good to have | recommended | good to have |
+| [Project repository has no binary artifacts](https://w3id.org/everse/i/indicators/has_no_binary_artifacts) | not relevant | good to have | good to have |
+| [Cohesion among methods/functions of a module follows community conventions](https://w3id.org/everse/i/indicators/internal_cohesion_ok) | not relevant | good to have | good to have |
+| [Software uses citation](https://w3id.org/everse/i/indicators/software_has_citation) | good to have | good to have | crucial |
+| [Software has license](https://w3id.org/everse/i/indicators/software_has_license) | crucial | crucial | crucial |
+| [Software has no linting issues](https://w3id.org/everse/i/indicators/has_no_linting_issues) | good to have | good to have | crucial |
+| [Software is published as a downloadable package](https://w3id.org/everse/i/indicators/has_published_package) | not relevant | not relevant | recommended |
+| [Software has releases](https://w3id.org/everse/i/indicators/has_releases) | good to have | good to have | crucial |
+| [Software requires human code review](https://w3id.org/everse/i/indicators/human_code_review_requirement) | not relevant | not relevant | good to have |
+| [Number of lines of code follows community standards or expectations](https://w3id.org/everse/i/indicators/lines_of_code_ok) | not relevant | good to have | good to have |
+| [Software is listed in a registry](https://w3id.org/everse/i/indicators/listed_in_registry) | recommended | recommended | crucial |
+| [Maintainability index follows community conventions](https://w3id.org/everse/i/indicators/maintainability_index_ok) | not relevant | good to have | good to have |
+| [Software has up-to-date metadata](https://w3id.org/everse/i/indicators/metadata_is_up_to_date) | good to have | good to have | recommended |
+| [No critical vulnerabilities](https://w3id.org/everse/i/indicators/no_critical_vulnerability) | good to have | good to have | crucial |
+| [No leaked credentials](https://w3id.org/everse/i/indicators/no_leaked_credentials) | crucial | crucial | crucial |
+| [All tests defined by the software component pass](https://w3id.org/everse/i/indicators/passed_tests_ok) | good to have | recommended | crucial |
+| [Software has persistent and unique identifier](https://w3id.org/everse/i/indicators/persistent_and_unique_identifier) | recommended | recommended | crucial |
+| [Project repository is active](https://w3id.org/everse/i/indicators/project_is_active) | good to have | good to have | good to have |
+| [Software has ci/cd workflows in its repository](https://w3id.org/everse/i/indicators/repository_workflows) | good to have | good to have | crucial |
+| [Software specifies requirements](https://w3id.org/everse/i/indicators/requirements_specified) | good to have | recommended | crucial |
+| [Responses to issues and/or pull requests are done within a defined timeframe](https://w3id.org/everse/i/indicators/response_timeframe_ok) | good to have | good to have | recommended |
+| [Software has documentation](https://w3id.org/everse/i/indicators/software_has_documentation) | good to have | recommended | crucial |
+| [Software uses an appropriate license for different file types](https://w3id.org/everse/i/indicators/software_has_license_for_file_types) | good to have | good to have | good to have |
+| [Software provides tests](https://w3id.org/everse/i/indicators/software_has_tests) | not relevant | good to have | crucial |
+| [The project's repository includes a container build file](https://w3id.org/everse/i/indicators/software_is_containerized) | good to have | good to have | recommended |
+| [Software has sufficient test coverage](https://w3id.org/everse/i/indicators/software_test_coverage) | good to have | good to have | crucial |
+| [Has static analysis for common vulnerabilities](https://w3id.org/everse/i/indicators/static_analysis_common_vulnerabilities) | good to have | good to have | crucial |
+| [Software provides issue tracking](https://w3id.org/everse/i/indicators/support_issue_tracking) | good to have | recommended | recommended |
+| [Software uses fuzzing](https://w3id.org/everse/i/indicators/uses_fuzzing) | not relevant | not relevant | good to have |
+| [Software uses a tool for warnings or mistakes](https://w3id.org/everse/i/indicators/uses_tool_for_warnings_and_mistakes) | good to have | good to have | recommended |
+| [Software makes use of version control](https://w3id.org/everse/i/indicators/version_control_use) | crucial | crucial | crucial |
+| [Software follows versioning standards](https://w3id.org/everse/i/indicators/versioning_standards_use) | good to have | recommended | crucial |
+
+</details>
 
 ## Candidate tools and indicators
 
@@ -100,9 +157,9 @@ See also the issue [#51 "list of next plugins"](https://github.com/EVERSE-Resear
 
 <!-- TODO: confirm with Dmitry and Jose Maria whether these libraries can be added to resqui. -->
 
-<!-- ### Proposed example cases
+<!-- ### Proposed example cases -->
 
-<!-- Two libraries that detect **license inconsistencies** in software, one for Java and one for Python, are being considered as example cases for the hackathon. The Java one would run as a Docker image with a wrapper script, and the Python one as a Python package. --> -->
+<!-- Two libraries that detect **license inconsistencies** in software, one for Java and one for Python, are being considered as example cases for the hackathon. The Java one would run as a Docker image with a wrapper script, and the Python one as a Python package. -->
 
 ## Contributing a new tool or indicator to `resqui`
 
