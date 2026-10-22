@@ -27,7 +27,10 @@ This repository collects the resources and instructions you need to contribute d
 | [Three-tier view](https://everse.software/RSQKit/three_tier_view) | Classification of research software into three tiers (analysis code, prototype tools, research software infrastructure). |
 | [TechRadar](https://everse.software/TechRadar/) | Catalogue of tools that measure or improve quality indicators. The full catalogue is also available as [JSON](https://everse.software/TechRadar/api/tools.json). |
 | [Tool selection criteria](https://github.com/EVERSE-ResearchSoftware/RSQKit/blob/main/TOOLS_SELECTION_CRITERIA.md) | Criteria for adding a tool to RSQKit or the TechRadar. |
-| [DashVERSE](https://www.dashverse.cloud/) | Dashboard to visualise quality assessments. |
+<!-- | [DashVERSE](https://www.dashverse.cloud/) | Dashboard to visualise quality assessments. |
+| [DashVERSE](https://github.com/EVERSE-ResearchSoftware/DashVERSE) | Dashboard to visualise quality assessments. | 
+TODO: the link to dashverse does not work, not sure if the github repo should be visible
+--> 
 
 ### resqui
 
@@ -39,7 +42,7 @@ This repository collects the resources and instructions you need to contribute d
 
 <!-- TODO: add the resqui/TechRadar indicator tables here once they are published in the public Google Drive. -->
 
-## Tracks
+## Project Tracks
 
 The project has three participation tracks, and you can join on site or remotely. No prior experience with software quality is needed for any of them.
 
@@ -54,7 +57,7 @@ The project has three participation tracks, and you can join on site or remotely
 
 ## Key concepts
 
-- **Indicator:** a measurable property of research software quality, for example `software_has_license` or `has_ci_tests`. Indicators are defined in the [EVERSE indicators catalogue](https://everse.software/indicators/website/indicators.html), and each one has an `@id` in the EVERSE vocabulary.
+- **Indicator:** a measurable property of research software quality, for example `software_has_license` or `has_ci-tests`. Indicators are defined in the [EVERSE indicators catalogue](https://everse.software/indicators/website/indicators.html), and each one has a unique identifier (its `@id`), a URI such as `https://w3id.org/everse/i/indicators/software_has_license`, which TechRadar and `resqui` use to refer to it.
 - **Tool:** an existing piece of software that can assess one or more indicators, for example [Gitleaks](https://everse.software/TechRadar/#/tool/gitleaks) or [OpenSSF Scorecard](https://github.com/ossf/scorecard). Tools are catalogued in the [TechRadar](https://everse.software/TechRadar/).
 - **Plugin:** the `resqui` code that wraps a tool, runs it on a repository and reports the result for each indicator it covers. Plugins run the tool either as a Python package (`PythonExecutor`) or as a Docker image (`DockerExecutor`).
 
