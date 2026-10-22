@@ -46,11 +46,11 @@ TODO: the link to dashverse does not work, not sure if the github repo should be
 
 The project has three participation tracks, and you can join on site or remotely. No prior experience with software quality is needed for any of them.
 
-| Track | Focus | Experience |
-|---|---|---|
-| **1. Coding** (this repository) | Add new tools and indicators to `resqui` as plugins, turning quality indicators into automated checks. | Some coding experience (Python, and Docker for some tools) and familiarity with Git and GitHub (forks, branches, pull requests) help. |
-| 2. Workflows | Bring quality indicators to [WorkflowHub](https://workflowhub.eu/) and BioFAIR, using real workflows as test cases. | No coding experience needed. |
-| 3. Health and genomic data | Shape the indicators B1MGplus needs, including security and a new *software responsibility* dimension for medical software. | No coding experience needed. |
+| Track | Focus | Experience | Coordinated |
+|---|---|---|---|
+| **1. Coding** (this repository) | Add new tools and indicators to `resqui` as plugins, turning quality indicators into automated checks. | Some coding experience (Python, and Docker for some tools) and familiarity with Git and GitHub (forks, branches, pull requests) help. | On site |
+| 2. Workflows | Bring quality indicators to [WorkflowHub](https://workflowhub.eu/) and BioFAIR, using real workflows as test cases. | No coding experience needed. | Online |
+| 3. Health and genomic data | Shape the indicators B1MGplus needs, including security and a new *software responsibility* dimension for medical software. | No coding experience needed. | On site |
 
 **This repository is mainly for Track 1.** The rest of this README explains how to pick a tool or indicator and contribute it to `resqui`. If you're interested in Tracks 2 or 3, join the [Slack channel](https://biohackeu.slack.com/archives/C0BBMFB0XEY) please. 
 <!-- TODO add were the info for the other tracks are -->
