@@ -1,6 +1,6 @@
 # BioHackathon Europe 2026 · Research Software Quality
 
-Entry point for **Project 8** of the [BioHackathon Europe 2026](https://github.com/elixir-europe/biohackathon-projects-2026/blob/main/8.md): *Advancing Research Software Quality across ELIXIR: Sustainable, Reproducible, and Interoperable Life-Science Software*.
+Entry point for **[Project 8](https://github.com/elixir-europe/biohackathon-projects-2026/blob/main/8.md)** of the [BioHackathon Europe 2026](https://biohackathon-europe.org/): *Advancing Research Software Quality across ELIXIR: Sustainable, Reproducible, and Interoperable Life-Science Software*.
 
 The project reviews, maps and prioritises research software quality indicators that matter to ELIXIR and related initiatives, such as [EVERSE](https://everse.software/), [B1MGplus](https://b1mg-project.eu/) and [ELIXIR-STEERS](https://elixir-europe.org/about-us/how-funded/eu-projects/steers). We also turn those indicators into automated checks in [resqui](https://github.com/EVERSE-ResearchSoftware/QualityPipelines), the EVERSE quality pipeline.
 
@@ -8,9 +8,6 @@ This repository collects the resources and instructions you need to contribute d
 
 **Co-leads:** Laura Portell-Silva, Shoaib Sufi, Styliani-Christina Fragkouli
 
-## Code of Conduct
-
-The BioHackathon follows the [ELIXIR Code of Conduct](https://elixir-europe.org/events/code-of-conduct). It applies to both in-person and virtual interactions in this project. See the [BioHackathon registration page](https://biohackathon-europe.org/attend/registration#code-of-conduct) for details.
 
 ## Resources
 
@@ -20,7 +17,6 @@ The BioHackathon follows the [ELIXIR Code of Conduct](https://elixir-europe.org/
 |---|---|
 | [Project page](https://github.com/elixir-europe/biohackathon-projects-2026/blob/main/8.md) | Official description of Project 8 in the BioHackathon projects repository. |
 | [Slack channel](https://biohackeu.slack.com/archives/C0BBMFB0XEY) | Main communication channel for the project (BioHackathon Europe Slack workspace). |
-| [Project overview](https://docs.google.com/document/d/1zGAxM7-GvqGruW7ceickFvOGYLyjlxloTAKQlunU8SM/edit?usp=sharing) | Participation tracks and how to join. |
 
 ### EVERSE
 
@@ -53,7 +49,8 @@ The project has three participation tracks, and you can join on site or remotely
 | 2. Workflows | Bring quality indicators to [WorkflowHub](https://workflowhub.eu/) and BioFAIR, using real workflows as test cases. | No coding experience needed. |
 | 3. Health and genomic data | Shape the indicators B1MGplus needs, including security and a new *software responsibility* dimension for medical software. | No coding experience needed. |
 
-**This repository is mainly for Track 1.** The rest of this README explains how to pick a tool or indicator and contribute it to `resqui`. If you're interested in Tracks 2 or 3, join the [Slack channel](https://biohackeu.slack.com/archives/C0BBMFB0XEY) and see the [project overview](https://docs.google.com/document/d/1zGAxM7-GvqGruW7ceickFvOGYLyjlxloTAKQlunU8SM/edit?usp=sharing).
+**This repository is mainly for Track 1.** The rest of this README explains how to pick a tool or indicator and contribute it to `resqui`. If you're interested in Tracks 2 or 3, join the [Slack channel](https://biohackeu.slack.com/archives/C0BBMFB0XEY) please. 
+<!-- TODO add were the info for the other tracks are -->
 
 ## Key concepts
 
@@ -165,3 +162,7 @@ If the tool is not in the TechRadar yet, it also needs to be registered there. A
 - [Plugins and the indicators they cover](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/explanation/plugins.md)
 - [Custom configurations](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/custom-configuration.md)
 - [Contributing guidelines](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/CONTRIBUTING.md)
+
+## Code of Conduct
+
+The BioHackathon follows the [ELIXIR Code of Conduct](https://elixir-europe.org/events/code-of-conduct). It applies to both in-person and virtual interactions in this project. See the [BioHackathon registration page](https://biohackathon-europe.org/attend/registration#code-of-conduct) for details.
