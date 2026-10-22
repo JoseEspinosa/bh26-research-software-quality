@@ -61,14 +61,14 @@ The project has three participation tracks, and you can join on site or remotely
 - **Tool:** an existing piece of software that can assess one or more indicators, for example [Gitleaks](https://everse.software/TechRadar/#/tool/gitleaks) or [OpenSSF Scorecard](https://github.com/ossf/scorecard). Tools are catalogued in the [TechRadar](https://everse.software/TechRadar/).
 - **Plugin:** the `resqui` code that wraps a tool, runs it on a repository and reports the result for each indicator it covers. Plugins run the tool either as a Python package (`PythonExecutor`) or as a Docker image (`DockerExecutor`).
 
-### Measuring vs. improving
+### Measuring tools
 
-The TechRadar links tools to indicators in two ways:
+In the TechRadar, a tool that assesses an indicator is linked to it with `measuresQualityIndicator`: you run the tool on a piece of software and it reports whether, or how well, the indicator is met. For example, the [FAIRsoft Evaluator](https://everse.software/TechRadar/#/tool/fairsoft-evaluator) reads a repository's metadata and reports whether it has a license, documentation or a citation.
 
-- `measuresQualityIndicator`: you run the tool on a piece of software and it reports whether, or how well, the indicator is met. For example, the [FAIRsoft Evaluator](https://everse.software/TechRadar/#/tool/fairsoft-evaluator) reads a repository's metadata and reports whether it has a license, documentation or a citation.
-- `improvesQualityIndicator`: adopting the tool helps your software meet the indicator, but the tool doesn't evaluate anything. For example, Apptainer makes your software containerized, but it never inspects a repository or produces a score.
+**Only measuring tools can become `resqui` plugins.**
 
-**Only measuring tools can become `resqui` plugins.** Some tools do both (for example `pytest`), and some TechRadar entries are not consistently curated. If you find a mismatch, such as a measuring tool listed only under "improves", it's worth reporting to the TechRadar.
+<!-- The TechRadar also links tools with `improvesQualityIndicator`: adopting the tool helps your software meet the indicator, but the tool doesn't evaluate anything. For example, Apptainer makes your software containerized, but it never inspects a repository or produces a score.
+Some tools do both (for example `pytest`), and some TechRadar entries are not consistently curated. If you find a mismatch, such as a measuring tool listed only under "improves", it's worth reporting to the TechRadar. -->
 
 ### Software tiers
 
