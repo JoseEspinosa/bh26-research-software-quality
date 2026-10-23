@@ -182,9 +182,7 @@ See also the issue [#51 "list of next plugins"](https://github.com/EVERSE-Resear
 1. Choose a tool and indicator from the [candidates](#candidate-tools-and-indicators), and check it's not in the [work already in progress](#work-already-in-progress).
 2. Open an issue in `resqui` with the [plugin or indicator request](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/issues/new?template=plugin_or_indicator_request.yml) template, or comment on an existing one, so others know you're working on it.
 3. Check that the indicator is in the [EVERSE indicators catalogue](https://everse.software/indicators/website/indicators.html) and use its exact identifier (for example `software_has_license`). `resqui` only accepts indicators defined there; if yours is missing, it has to be proposed to EVERSE first.
-
-
-<!-- 
+ 
 
 ### 2. Fork and set up `resqui`
 
@@ -197,15 +195,17 @@ git remote add upstream https://github.com/EVERSE-ResearchSoftware/QualityPipeli
 git checkout -b plugin/<tool-name>
 ```
 
-Install the development environment and run the tests (Python 3.9+, and Docker for plugins that use Docker images):
+Create a virtual environment, install `resqui` in development mode and run the tests, as described in the [contributing guidelines](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/CONTRIBUTING.md#local-setup) (Python 3.9+, and Docker for plugins that use Docker images):
 
 ```bash
-make install-dev
+make install-dev          # creates venv/ and installs resqui with dev dependencies
+source venv/bin/activate  # needed for the resqui commands in step 4
 make test
 ```
 
-> [!TIP]
-> Always work from the `main` branch of the repository rather than the release on PyPI. The PyPI version may pull some Docker images (such as OpenSSF Scorecard) from registries that are no longer publicly accessible.
+
+
+<!--
 
 ### 3. Write the plugin
 
@@ -248,6 +248,82 @@ The BioHackathon follows the [ELIXIR Code of Conduct](https://elixir-europe.org/
 
 <!-- TODO
 - [ ] Create table that links the indicators with the max value of priority with the missing indicators in techradar
-   - [ ] 
+   - [ ]
+ 
 - [ ] Keep updating index
+
+- [ ] When I was working with resqui on my computer I saw this, as the image is not there resqui does not work!!! In the tutorial this is not relevant because we will use the resqui modified from the user's fork that should have the fix.
+   > [!TIP]
+   > Always work from the `main` branch of the repository rather than the release on PyPI. The PyPI version may pull some Docker images (such as OpenSSF Scorecard) from registries that are no longer publicly accessible.
+
+- [ ] more todos
+
+- [ ] Create an issue in the resqui repo:
+
+   ```markdown
+   Title: bug: "Local setup" in CONTRIBUTING.md leaves the venv empty (make install-dev does nothing)
+
+
+   ### Where does the failure happen?
+
+   Test or CI workflow (local development setup)
+
+   ### Exact command or workflow step
+
+   ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+   make install-dev
+   ```
+
+   ### What did you expect to happen?
+
+   Following the "Local setup" steps in `CONTRIBUTING.md` should install `resqui` with its dev dependencies into `venv/`, so that `make test` and `resqui` work afterwards.
+
+   ### What happened instead?
+
+   ```shell
+   $ python3 -m venv venv
+   $ source venv/bin/activate
+   (venv) $ make install-dev
+   make: Nothing to be done for 'install-dev'.
+   ```
+
+   Nothing is installed: `resqui` and `coverage` are missing from the venv, so `make test` and `resqui` fail.
+
+   The cause is that `install-dev` depends only on the file `venv/bin/activate`:
+
+   ```make
+   $(VENV)/bin/activate: pyproject.toml
+      python3 -m venv $(VENV)
+      $(PIP) install -e ".[dev,docs]"
+      touch $(VENV)/bin/activate
+   ```
+
+   Running `python3 -m venv venv` by hand, as `CONTRIBUTING.md` says, creates `venv/bin/activate`, which is newer than `pyproject.toml`. `make` treats the target as up to date and skips the `pip install`.
+
+   ### Possible fixes
+
+   Any of these would work:
+
+   1. Change `CONTRIBUTING.md` to let `make` create the venv:
+      ```bash
+      make install-dev
+      source venv/bin/activate
+      ```
+   2. Use a marker file as the target instead of `venv/bin/activate` (for example `$(VENV)/.installed`, touched after `pip install`), so a pre-existing venv still gets the dependencies installed.
+   3. Make `install-dev` always run `$(PIP) install -e ".[dev,docs]"`.
+
+   ### Repository being assessed
+
+   N/A (setup issue)
+
+   ### Configuration file
+
+   N/A (failure happens before running `resqui`)
+
+   ### How did you run it?
+
+   Local Python environment
+   ```
  -->
