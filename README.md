@@ -176,14 +176,15 @@ See also the issue [#51 "list of next plugins"](https://github.com/EVERSE-Resear
 
 ## Contributing to resqui during the hackathon
 
-<!-- 
 
 ### 1. Pick and claim a candidate
 
 1. Choose a tool and indicator from the [candidates](#candidate-tools-and-indicators), and check it's not in the [work already in progress](#work-already-in-progress).
 2. Open an issue in `resqui` with the [plugin or indicator request](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/issues/new?template=plugin_or_indicator_request.yml) template, or comment on an existing one, so others know you're working on it.
-3. Check that the indicator exists in the [EVERSE indicators catalogue](https://everse.software/indicators/website/indicators.html). Its `@id` must match the EVERSE vocabulary.
+3. Check that the indicator is in the [EVERSE indicators catalogue](https://everse.software/indicators/website/indicators.html) and use its exact identifier (for example `software_has_license`). `resqui` only accepts indicators defined there; if yours is missing, it has to be proposed to EVERSE first.
 
+
+<!-- 
 
 ### 2. Fork and set up `resqui`
 
