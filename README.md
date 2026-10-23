@@ -243,14 +243,17 @@ make test
 
 Push your branch to your fork and open a pull request against `main` in `EVERSE-ResearchSoftware/QualityPipelines`, linking the issue you opened in step 1. Follow the [contributing guidelines](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/CONTRIBUTING.md).
 
+<!--
+TODO: Should we maybe put the comment below as a first thing to do?
+-->
 If the tool is not in the TechRadar yet, it also needs to be registered there. Ask in the [Slack channel](https://biohackeu.slack.com/archives/C0BBMFB0XEY) how to do it.
 
 <!--
-### Further reading
+### `resqui` documentation
 
-- [Add an Indicator Plugin](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md)
-- [Plugins and the indicators they cover](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/explanation/plugins.md)
-- [Custom configurations](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/custom-configuration.md)
+- [Add an Indicator Plugin](https://everse.software/QualityPipelines/how-to/add-a-plugin/)
+- [Plugins and the indicators they cover](https://everse.software/QualityPipelines/explanation/plugins/)
+- [Custom configurations](https://everse.software/QualityPipelines/how-to/custom-configuration/)
 - [Contributing guidelines](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/CONTRIBUTING.md)
 
 -->
