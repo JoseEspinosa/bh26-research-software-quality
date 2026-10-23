@@ -220,8 +220,8 @@ In `__init__`, create an executor that matches how the tool is distributed:
 
 | Tool is distributed as | Executor | How you call it |
 |---|---|---|
-| A Python package | [`PythonExecutor(packages=["<package>==<version>"])`](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md#using-pythonexecutor) | `self.executor.execute("<python code>")` |
-| A Docker image, or needs other languages or system dependencies | [`DockerExecutor("<image>:<tag>")`](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md#using-dockerexecutor) | `self.executor.run([<arguments>])` |
+| [A Python package](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md#using-pythonexecutor) | `PythonExecutor(packages=["<package>==<version>"])` | `self.executor.execute("<python code>")` |
+| [A Docker image, or needs other languages or system dependencies](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md#using-dockerexecutor) | `DockerExecutor("<image>:<tag>")` | `self.executor.run([<arguments>])` |
 
 **Register and test it**
 
