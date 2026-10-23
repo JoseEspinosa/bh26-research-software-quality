@@ -74,7 +74,7 @@ Some tools do both (for example `pytest`), and some TechRadar entries are not co
 
 RSQKit classifies research software into [three tiers](https://everse.software/RSQKit/three_tier_view): **analysis code**, **prototype tools** and **research software infrastructure**. How relevant an indicator is depends on the tier. Something that is nice to have for analysis code can be essential for research software infrastructure. `resqui` ships configuration files with the recommended indicators for [analysis code](https://raw.githubusercontent.com/EVERSE-ResearchSoftware/QualityPipelines/main/configurations/indicators_analysis_code.json), [prototype tools](https://raw.githubusercontent.com/EVERSE-ResearchSoftware/QualityPipelines/main/configurations/indicators_prototype_tools.json) and [research software infrastructure](https://raw.githubusercontent.com/EVERSE-ResearchSoftware/QualityPipelines/main/configurations/indicators_rs_infrastructure.json).
 
-EVERSE rates how relevant each indicator is for each tier: *crucial*, *recommended*, *good to have* or *not relevant*. The table below is taken from [Relevance of Indicators for RS Tiers](https://everse.software/indicators/website/rs_tiers.html).
+EVERSE rates how relevant each indicator is for each tier: *crucial*, *recommended*, *good to have* or *not relevant*. The table below is taken from [Relevance of Indicators for RS Tiers](https://everse.software/indicators/website/rs_tiers.html) (accessed on 22 October 2026).
 
 <details>
 <summary>Relevance of indicators for each tier</summary>
@@ -133,7 +133,7 @@ EVERSE rates how relevant each indicator is for each tier: *crucial*, *recommend
 
 ## Candidate tools and indicators
 
-The main target of Track 1 is **TechRadar tools that measure indicators not yet covered by `resqui`**. We compared the TechRadar catalogue with the plugins currently in `resqui` to build a list of candidates.
+The main target of Track 1 is **TechRadar tools that measure indicators not yet covered by `resqui`**. We compared the [TechRadar catalogue](https://everse.software/TechRadar/#/) with the plugins currently in `resqui` to build a list of candidates, and we use the [relevance of each indicator](#software-tiers) for each tier to prioritise them.
 
 <!-- TODO: link the public Google Drive tables here:
      - TechRadar measuring tools vs. indicators already in resqui (candidates to add)
@@ -231,3 +231,7 @@ If the tool is not in the TechRadar yet, it also needs to be registered there. A
 ## Code of Conduct
 
 The BioHackathon follows the [ELIXIR Code of Conduct](https://elixir-europe.org/events/code-of-conduct). It applies to both in-person and virtual interactions in this project. See the [BioHackathon registration page](https://biohackathon-europe.org/attend/registration#code-of-conduct) for details.
+
+<!-- TODO
+Create table that links the indicators with the max value of priority with the 
+ -->
