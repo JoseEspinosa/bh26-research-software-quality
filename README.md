@@ -238,7 +238,6 @@ resqui -c <your-config>.json -u <repo-url> -t $GITHUB_TOKEN -o test.json
 make test
 ```
 
-<!--
 
 ### 5. Open a pull request
 
@@ -246,6 +245,7 @@ Push your branch to your fork and open a pull request against `main` in `EVERSE-
 
 If the tool is not in the TechRadar yet, it also needs to be registered there. Ask in the [Slack channel](https://biohackeu.slack.com/archives/C0BBMFB0XEY) how to do it.
 
+<!--
 ### Further reading
 
 - [Add an Indicator Plugin](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md)
