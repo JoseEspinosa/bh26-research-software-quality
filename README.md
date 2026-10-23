@@ -204,21 +204,32 @@ make test
 ```
 
 
-
-<!--
-
 ### 3. Write the plugin
 
-The [Add an Indicator Plugin](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md) guide covers the details. In short:
+The [Add an Indicator Plugin](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md) guide covers the details. Every plugin has the same structure; the only thing that changes is how it runs the tool.
 
-1. Create `src/resqui/plugins/<tool-name>.py` with a class that subclasses `IndicatorPlugin`. Set its `name`, `version`, `id` (the tool's TechRadar `@id`) and `indicators`, and add one method per indicator that returns a `CheckResult`.
-2. Choose how to run the tool:
-   - `PythonExecutor` if the tool is a Python package.
-   - `DockerExecutor` if the tool is distributed as a Docker image, or needs other languages or system dependencies.
-3. Import the plugin in `src/resqui/plugins/__init__.py`.
-4. Add the indicator to a configuration file in `configurations/`.
-5. Add tests in `tests/` and document the plugin in `docs/explanation/plugins.md`.
+**What every plugin has**
 
+1. A file `src/resqui/plugins/<tool-name>.py` with a class that subclasses `IndicatorPlugin`.
+2. The attributes `name`, `version`, `id` (the tool's TechRadar `@id`) and `indicators` (the EVERSE indicator identifiers it checks).
+3. One method per indicator, named after the indicator, that runs the tool and returns a `CheckResult`.
+
+**How it runs the tool**
+
+In `__init__`, create an executor that matches how the tool is distributed:
+
+| Tool is distributed as | Executor | How you call it |
+|---|---|---|
+| A Python package | `PythonExecutor(packages=["<package>==<version>"])` | `self.executor.execute("<python code>")` |
+| A Docker image, or needs other languages or system dependencies | `DockerExecutor("<image>:<tag>")` | `self.executor.run([<arguments>])` |
+
+**Register and test it**
+
+1. Import the plugin in `src/resqui/plugins/__init__.py`.
+2. Add the indicator to a configuration file in `configurations/`.
+3. Add tests in `tests/` and document the plugin in `docs/explanation/plugins.md`.
+
+<!--
 ### 4. Check it works
 
 ```bash
