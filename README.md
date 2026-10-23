@@ -135,10 +135,8 @@ EVERSE rates how relevant each indicator is for each tier: *crucial*, *recommend
 
 The main target of Track 1 is **TechRadar tools that measure indicators not yet covered by `resqui`**. We compared the [TechRadar catalogue](https://everse.software/TechRadar/#/) with the plugins currently in `resqui` to build a list of candidates, and we use the [relevance of each indicator](#software-tiers) for each tier to prioritise them.
 
-<!-- TODO: link the public Google Drive tables here:
-     - TechRadar measuring tools vs. indicators already in resqui (candidates to add)
-     - resqui indicators vs. TechRadar (mismatches worth reporting)
-     - Prioritisation of candidate indicators per tier -->
+This summary of this analysis can be found here this can be found  the tools and  [candidate tools and indicators spreadsheet](https://docs.google.com/spreadsheets/d/1sZpNknO0m_BJpyFusTtPjwqF0dwoULMGv_Ii139OqfA/edit?usp=sharing) collects this analysis:
+
 
 ### Work already in progress
 
@@ -233,5 +231,7 @@ If the tool is not in the TechRadar yet, it also needs to be registered there. A
 The BioHackathon follows the [ELIXIR Code of Conduct](https://elixir-europe.org/events/code-of-conduct). It applies to both in-person and virtual interactions in this project. See the [BioHackathon registration page](https://biohackathon-europe.org/attend/registration#code-of-conduct) for details.
 
 <!-- TODO
-Create table that links the indicators with the max value of priority with the 
+- [ ] Create table that links the indicators with the max value of priority with the missing indicators in techradar
+   - [ ] 
+- [ ] Add index
  -->
