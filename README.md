@@ -225,11 +225,11 @@ In `__init__`, create an executor that matches how the tool is distributed:
 
 **Register and test it**
 
-1. Import the plugin in `src/resqui/plugins/__init__.py`.
-2. Add the indicator to a configuration file in `configurations/`.
-3. Add tests in `tests/` and document the plugin in `docs/explanation/plugins.md`.
+1. Import the plugin in [`src/resqui/plugins/__init__.py`](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/src/resqui/plugins/__init__.py).
+2. Add the indicator to a configuration file in [`configurations/`](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/tree/main/configurations).
+3. Add tests in [`tests/`](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/tree/main/tests) and document the plugin in [`docs/explanation/plugins.md`](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/explanation/plugins.md).
 
-<!--
+
 ### 4. Check it works
 
 ```bash
@@ -237,6 +237,8 @@ resqui indicators                                   # your plugin and indicators
 resqui -c <your-config>.json -u <repo-url> -t $GITHUB_TOKEN -o test.json
 make test
 ```
+
+<!--
 
 ### 5. Open a pull request
 
