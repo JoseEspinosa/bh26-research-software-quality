@@ -181,7 +181,7 @@ See also the issue [#51 "list of next plugins"](https://github.com/EVERSE-Resear
 
 1. Choose a tool and indicator from the [candidates](#candidate-tools-and-indicators), and check it's not in the [work already in progress](#work-already-in-progress).
 2. Open an issue in `resqui` with the [plugin or indicator request](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/issues/new?template=plugin_or_indicator_request.yml) template, or comment on an existing one, so others know you're working on it.
-3. Check that the indicator is in the [EVERSE indicators catalogue](https://everse.software/indicators/website/indicators.html) and use its exact identifier (for example `software_has_license`). `resqui` only accepts indicators defined there; if yours is missing, it has to be proposed to EVERSE first.
+3. Check that the indicator is in the [EVERSE indicators catalogue](https://everse.software/indicators/website/indicators.html) and use its exact identifier (for example `software_has_license`). `resqui` only accepts indicators defined there. If yours is missing, it has to be proposed to EVERSE first.
  
 
 ### 2. Fork and set up `resqui`
@@ -206,7 +206,7 @@ make test
 
 ### 3. Write the plugin
 
-The [Add an Indicator Plugin](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md) guide covers the details. Every plugin has the same structure; the only thing that changes is how it runs the tool.
+The [Add an Indicator Plugin](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md) guide covers the details. Every plugin has the same structure, the only thing that changes is how it runs the tool.
 
 **What every plugin has**
 
@@ -218,10 +218,14 @@ The [Add an Indicator Plugin](https://github.com/EVERSE-ResearchSoftware/Quality
 
 In `__init__`, create an executor that matches how the tool is distributed:
 
-| Tool is distributed as | Executor | How you call it |
-|---|---|---|
-| A Python package | `PythonExecutor(packages=["<package>==<version>"])` | `self.executor.execute("<python code>")` |
-| A Docker image, or needs other languages or system dependencies | `DockerExecutor("<image>:<tag>")` | `self.executor.run([<arguments>])` |
+| Tool is distributed as | Executor | Guide example | Plugin in `resqui` |
+|---|---|---|---|
+| Python package | `PythonExecutor` | [Using PythonExecutor](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md#using-pythonexecutor) | TBD |
+| Docker image (other languages or system dependencies) | `DockerExecutor` | [Using DockerExecutor](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md#using-dockerexecutor) | TBD |
+
+<!-- TODO: replace TBD with links to real plugins in src/resqui/plugins/ that use each executor. -->
+
+`PythonExecutor` installs the pinned packages and runs Python code with `self.executor.execute("<python code>")`. `DockerExecutor` runs the image with `self.executor.run([<arguments>])`.
 
 **Register and test it**
 
