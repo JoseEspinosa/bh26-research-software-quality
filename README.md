@@ -8,6 +8,20 @@ This repository collects the resources and instructions you need to contribute d
 
 **Co-leads:** Laura Portell-Silva, Shoaib Sufi, Styliani-Christina Fragkouli
 
+## Contents
+
+- [Resources](#resources)
+  - [Project](#project)
+  - [EVERSE](#everse)
+  - [resqui](#resqui)
+- [Project Tracks](#project-tracks)
+- [Key concepts](#key-concepts)
+  - [Measuring tools](#measuring-tools)
+  - [Software tiers](#software-tiers)
+- [Candidate tools and indicators](#candidate-tools-and-indicators)
+  - [Work already in progress](#work-already-in-progress)
+- [Contributing to resqui during the hackathon](#contributing-to-resqui-during-the-hackathon)
+- [Code of Conduct](#code-of-conduct)
 
 ## Resources
 
@@ -137,6 +151,7 @@ The main target of Track 1 is **TechRadar tools that measure indicators not yet 
 
 This summary of this analysis can be found here this can be found  the tools and  [candidate tools and indicators spreadsheet](https://docs.google.com/spreadsheets/d/1sZpNknO0m_BJpyFusTtPjwqF0dwoULMGv_Ii139OqfA/edit?usp=sharing) collects this analysis:
 
+<!-- TODO: Add how to pick a given tool in the sheet or in an ad-hoc github project -->
 
 ### Work already in progress
 
@@ -157,9 +172,9 @@ See also the issue [#51 "list of next plugins"](https://github.com/EVERSE-Resear
 
 <!-- ### Proposed example cases -->
 
-<!-- Two libraries that detect **license inconsistencies** in software, one for Java and one for Python, are being considered as example cases for the hackathon. The Java one would run as a Docker image with a wrapper script, and the Python one as a Python package. -->
+<!-- Two libraries that detect **license inconsistencies** in software, one for Java and one for Python, are being considered as example cases for the hackathon. The Java one would run as a Docker image with a wrapper script, and the Python one as a Python package. NOT MAINTAINED FOR TWO YEARS, WON'T DO-->
 
-## Contributing a new tool or indicator to `resqui`
+## Contributing to resqui during the hackathon
 
 <!-- 
 
