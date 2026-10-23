@@ -248,5 +248,5 @@ The BioHackathon follows the [ELIXIR Code of Conduct](https://elixir-europe.org/
 <!-- TODO
 - [ ] Create table that links the indicators with the max value of priority with the missing indicators in techradar
    - [ ] 
-- [ ] Add index
+- [ ] Keep updating index
  -->
