@@ -218,14 +218,10 @@ The [Add an Indicator Plugin](https://github.com/EVERSE-ResearchSoftware/Quality
 
 In `__init__`, create an executor that matches how the tool is distributed:
 
-| Tool is distributed as | Executor | Guide example | Plugin in `resqui` |
-|---|---|---|---|
-| Python package | `PythonExecutor` | [Using PythonExecutor](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md#using-pythonexecutor) | TBD |
-| Docker image (other languages or system dependencies) | `DockerExecutor` | [Using DockerExecutor](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md#using-dockerexecutor) | TBD |
-
-<!-- TODO: replace TBD with links to real plugins in src/resqui/plugins/ that use each executor. -->
-
-`PythonExecutor` installs the pinned packages and runs Python code with `self.executor.execute("<python code>")`. `DockerExecutor` runs the image with `self.executor.run([<arguments>])`.
+| Tool is distributed as | Executor | How you call it |
+|---|---|---|
+| A Python package | [`PythonExecutor(packages=["<package>==<version>"])`](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md#using-pythonexecutor) | `self.executor.execute("<python code>")` |
+| A Docker image, or needs other languages or system dependencies | [`DockerExecutor("<image>:<tag>")`](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md#using-dockerexecutor) | `self.executor.run([<arguments>])` |
 
 **Register and test it**
 
