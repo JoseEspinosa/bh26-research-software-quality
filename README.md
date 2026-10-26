@@ -206,7 +206,7 @@ make test
 
 ### 3. Write the plugin
 
-The [Add an Indicator Plugin](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md) guide covers the details. Every plugin has the same structure, the only thing that changes is how it runs the tool.
+The [Add an Indicator Plugin](https://everse.software/QualityPipelines/how-to/add-a-plugin/) guide covers the details. Every plugin has the same structure, the only thing that changes is how it runs the tool.
 
 **What every plugin has**
 
@@ -220,8 +220,8 @@ In `__init__`, create an executor that matches how the tool is distributed:
 
 | Tool is distributed as | Executor | How you call it |
 |---|---|---|
-| [A Python package](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md#using-pythonexecutor) | `PythonExecutor(packages=["<package>==<version>"])` | `self.executor.execute("<python code>")` |
-| [A Docker image, or needs other languages or system dependencies](https://github.com/EVERSE-ResearchSoftware/QualityPipelines/blob/main/docs/how-to/add-a-plugin.md#using-dockerexecutor) | `DockerExecutor("<image>:<tag>")` | `self.executor.run([<arguments>])` |
+| [A Python package](https://everse.software/QualityPipelines/how-to/add-a-plugin/#using-pythonexecutor) | `PythonExecutor(packages=["<package>==<version>"])` | `self.executor.execute("<python code>")` |
+| [A Docker image, or needs other languages or system dependencies](https://everse.software/QualityPipelines/how-to/add-a-plugin/#using-dockerexecutor) | `DockerExecutor("<image>:<tag>")` | `self.executor.run([<arguments>])` |
 
 **Register and test it**
 
@@ -245,8 +245,9 @@ Push your branch to your fork and open a pull request against `main` in `EVERSE-
 
 <!--
 TODO: Should we maybe put the comment below as a first thing to do?
+??? If the tool is not in the TechRadar yet, it also needs to be registered there. Ask in the [Slack channel](https://biohackeu.slack.com/archives/C0BBMFB0XEY) how to do it.
 -->
-If the tool is not in the TechRadar yet, it also needs to be registered there. Ask in the [Slack channel](https://biohackeu.slack.com/archives/C0BBMFB0XEY) how to do it.
+
 
 <!--
 ### `resqui` documentation
@@ -263,8 +264,8 @@ If the tool is not in the TechRadar yet, it also needs to be registered there. A
 The BioHackathon follows the [ELIXIR Code of Conduct](https://elixir-europe.org/events/code-of-conduct). It applies to both in-person and virtual interactions in this project. See the [BioHackathon registration page](https://biohackathon-europe.org/attend/registration#code-of-conduct) for details.
 
 <!-- TODO
-- [ ] Create table that links the indicators with the max value of priority with the missing indicators in techradar
-   - [ ]
+- [?] Create table that links the indicators with the max value of priority with the missing indicators in techradar. 
+   - [x] Could the link to the google sheets be enough?
  
 - [ ] Keep updating index
 
