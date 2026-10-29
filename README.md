@@ -4,7 +4,7 @@ Entry point for **[Project 8](https://github.com/elixir-europe/biohackathon-proj
 
 The project reviews, maps and prioritises research software quality indicators that matter to ELIXIR and related initiatives, such as [EVERSE](https://everse.software/), [B1MGplus](https://b1mg-project.eu/) and [ELIXIR-STEERS](https://elixir-europe.org/about-us/how-funded/eu-projects/steers). We also turn those indicators into automated checks in [resqui](https://github.com/EVERSE-ResearchSoftware/QualityPipelines), the EVERSE quality pipeline.
 
-This repository collects the resources and instructions you need to contribute during the hackathon to the track 1 of project, which is focus on adding new tools and indicators to [`resqui`](https://github.com/EVERSE-ResearchSoftware/QualityPipelines).
+This repository collects the resources and instructions you need to contribute during the hackathon to the thread 1 of the project. This thread is focused on adding new tools and indicators to [`resqui`](https://github.com/EVERSE-ResearchSoftware/QualityPipelines).
 
 **Co-leads:** Laura Portell-Silva, Shoaib Sufi, Styliani-Christina Fragkouli
 
